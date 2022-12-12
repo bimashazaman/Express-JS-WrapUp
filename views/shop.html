@@ -5,11 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Product</title>
+
+    <style>
+      .body {
+        background-color: #ccc;
+        margin: 0;
+        padding: 0;
+      }
+      .main-header {
+        background-color: #ccc;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+      }
+
+      .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+
+      .main-nav li {
+        margin: 0 10px;
+      }
+
+      .main-nav li a {
+        text-decoration: none;
+        color: #000;
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <nav>
-        <ul>
+        <ul class="main-nav">
           <li><a href="/">Shop</a></li>
           <li><a href="/admin/add-product">Add Product</a></li>
         </ul>

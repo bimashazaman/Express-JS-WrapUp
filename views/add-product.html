@@ -5,19 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Product</title>
+    <style>
+      .body {
+        background-color: #ccc;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-header {
+        background-color: #ccc;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+      }
+
+      .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+
+      .main-nav li {
+        margin: 0 10px;
+      }
+
+      .main-nav li a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .add-product-form {
+        margin: 20px;
+      }
+
+      .input-add-product {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .submit-button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Shop</a></li>
-          <li><a href="/admin/add-product">Add Product</a></li>
-        </ul>
-      </nav>
-    </header>
-    <form action="/admin/add-product" method="POST">
-      <input type="text" name="title" />
-      <button type="submit">Add Product</button>
-    </form>
+    <center>
+      <header class="main-header">
+        <nav>
+          <ul class="main-nav">
+            <li><a href="/">Shop</a></li>
+            <li><a href="/admin/add-product">Add Product</a></li>
+          </ul>
+        </nav>
+      </header>
+      <form action="/admin/add-product" method="POST" class="add-product-form">
+        <input
+          type="text"
+          name="title"
+          class="input-add-product"
+          placeholder="Add a product"
+        />
+        <button type="submit" class="submit-button">Add Product</button>
+      </form>
+    </center>
   </body>
 </html>
