@@ -1,11 +1,14 @@
 const http = require('http')
-
+const bodyParser = require('body-parser')
 const express = require('express')
 
 const app = express()
 
-const server = http.createServer(app)
+app.use(bodyParser.urlencoded({ extended: false }))
 
-server.listen(3000, () => {
-  console.log('server is running on port 3000')
-})
+const adminRoutes = require('./routes/admin')
+const shopRoutes = require('./routes/shop')
+app.use('/admin', adminRoutes)
+app.use(shopRoutes)
+
+app.listen(3000)
